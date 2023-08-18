@@ -1,0 +1,21 @@
+\documentclass{scrartcl}
+\usepackage{mathtools}
+\usepackage{tabularx}
+\usepackage{environ}
+\pagenumbering{gobble}
+\NewEnviron{myequation}{%
+    \begin{equation*}
+    \scalebox{1.75}{$\BODY$}
+    \end{equation*}
+    }
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\setlength\parindent{0pt}
+\begin{document}
+\begin{center}
+\LARGE Math Worksheet
+\end{center}
+%\begin{tabularx}{\textwidth}{XXXX}
+\begin{tabularx}{\textwidth}{@{}YYYY@{}}
+#problems
+\end{tabularx}
+\end{document}
